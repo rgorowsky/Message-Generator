@@ -6,3 +6,6 @@ Have placeholder greetings, salutations, core messages, etc.  Pull from a db/lis
 
 # Nice to Haves, or for the Future...
 DB of people that post messages at different variables, add a randomizer to the time periods, be able to scrape recent data from the net and based on user details generate a sentiment statement
+
+# How to Run?
+the messageGenerator.ts file has the main executable functions.  To run, open terminal and input 'node messageGenerator.js'
