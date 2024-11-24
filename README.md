@@ -1,5 +1,5 @@
 # Message-Generator
-Developing a messaging system bot, playing around with some concepts
+Developing a messaging system bot, playing around with some concepts.  Basic code and functions written in typescript
 
 # Core Function
 Have placeholder greetings, salutations, core messages, etc.  Pull from a db/list of recipients that can be updated independently
