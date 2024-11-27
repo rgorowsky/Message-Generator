@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // or ES2015
+    "module": "commonjs",
+    "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["methods.ts", "json_files/customers.json"]
+}

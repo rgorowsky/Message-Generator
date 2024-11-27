@@ -1,4 +1,4 @@
-import fs from './customers.json';
+import customerData from './json_files/customers.json';
 
 export class TimeMethods {
     timeOfDay(): string {
@@ -18,18 +18,15 @@ export class TimeMethods {
         return timeOfDay;
     };
 
-    reservationCheckin(filePath: string, startTimestamp: number): number | null {
-        let reservationsToday = ''
-        const customerData = fs.readFileSync(filePath, 'utf-8');
-        const jsonObject = JSON.parse(customerData);
+    reservationCheckin(comp_time: number): number | null {
+        let reservationsToday = 0;
 
-        for (const customer of jsonObject) {
-            if (customer.reservation.startTimestamp.getHours() === 1) {
-                let reservationsToday = customer.id;
-                return reservationsToday;
+        for (const customer of customerData) {
+            if (customer.reservation.startTimestamp === comp_time) {
+                return customer.id;
             }
         }
 
-        return null; //if no matches are found
+        return reservationsToday; //if no matches are found
     };
 };

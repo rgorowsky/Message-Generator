@@ -1,5 +1,16 @@
 {
   "dependencies": {
     "typescript": "^5.7.2"
-  }
+  },
+  "name": "message-generator",
+  "description": "Developing a messaging system bot, playing around with some concepts.  Basic code and functions written in typescript",
+  "version": "1.0.0",
+  "main": "methods.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
