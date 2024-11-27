@@ -8,6 +8,4 @@ Have placeholder greetings, salutations, core messages, etc.  Pull from a db/lis
 DB of people that post messages at different variables, add a randomizer to the time periods, be able to scrape recent data from the net and based on user details generate a sentiment statement
 
 # How to Run?
-the messageGenerator.ts file has the main executable functions.  To run, open terminal and input 'node messageGenerator.js'.  If there have been recent additions or edits, executable code will have to be converted to javascript.  Use this command to convert the files before running 'node message_generator.js':
-
-tsc message_generator.ts methods.ts; or tsc *
+the messageGenerator.ts file has the main executable functions.  I have opted to not convert files to javascript but rather run directly via typescript using 'npx ts-node [executable file]'
