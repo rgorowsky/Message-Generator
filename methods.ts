@@ -18,15 +18,33 @@ export class TimeMethods {
         return timeOfDay;
     };
 
-    reservationCheckin(comp_time: number): number | null {
-        let reservationsToday = 0;
+    reservationCheckin(comp_start: number, comp_end: number): number[] {
+        let reservationsToday = [];
 
         for (const customer of customerData) {
-            if (customer.reservation.startTimestamp === comp_time) {
-                return customer.id;
+            if (comp_start <= customer.reservation.startTimestamp && customer.reservation.startTimestamp <= comp_end ) {
+                // return customer.id;
+                reservationsToday.push(customer.id);
             }
         }
 
-        return reservationsToday; //if no matches are found
+        return reservationsToday;
     };
+
+    sendCheckinBlast(reservationsToday: number[]): string[] {
+        let messages: string[] = [];
+    
+        for (const id of reservationsToday) {
+            for (const customer of customerData) {
+                if (id === customer.id) {
+                    messages.push(
+                        `Welcome ${customer.firstName}, your room number ${customer.reservation.roomNumber} will be ready soon. Please prepare your things.`
+                    );
+                }
+            }
+        }
+    
+        return messages;
+    }
+    
 };
